@@ -169,6 +169,18 @@ ORDER BY gender_cnt DESC;
 -- What is the gender distribution per branch?
 SELECT gender, COUNT(*) as gender_cnt
 FROM sales
+WHERE branch = "A"
+GROUP BY gender
+ORDER BY gender_cnt DESC;
+
+SELECT gender, COUNT(*) as gender_cnt
+FROM sales
+WHERE branch = "B"
+GROUP BY gender
+ORDER BY gender_cnt DESC;
+
+SELECT gender, COUNT(*) as gender_cnt
+FROM sales
 WHERE branch = "C"
 GROUP BY gender
 ORDER BY gender_cnt DESC;
@@ -200,6 +212,42 @@ ORDER BY avg_rating DESC;
 SELECT time_of_day, COUNT(*) AS total_sales
 FROM sales
 WHERE day_name = "Sunday"
+GROUP BY time_of_day 
+ORDER BY total_sales DESC;
+
+SELECT time_of_day, COUNT(*) AS total_sales
+FROM sales
+WHERE day_name = "Monday"
+GROUP BY time_of_day 
+ORDER BY total_sales DESC;
+
+SELECT time_of_day, COUNT(*) AS total_sales
+FROM sales
+WHERE day_name = "Tuesday"
+GROUP BY time_of_day 
+ORDER BY total_sales DESC;
+
+SELECT time_of_day, COUNT(*) AS total_sales
+FROM sales
+WHERE day_name = "Wednesday"
+GROUP BY time_of_day 
+ORDER BY total_sales DESC;
+
+SELECT time_of_day, COUNT(*) AS total_sales
+FROM sales
+WHERE day_name = "Thursday"
+GROUP BY time_of_day 
+ORDER BY total_sales DESC;
+
+SELECT time_of_day, COUNT(*) AS total_sales
+FROM sales
+WHERE day_name = "Friday"
+GROUP BY time_of_day 
+ORDER BY total_sales DESC;
+
+SELECT time_of_day, COUNT(*) AS total_sales
+FROM sales
+WHERE day_name = "Saturday"
 GROUP BY time_of_day 
 ORDER BY total_sales DESC;
 -- Evenings experience most sales, the stores are 
